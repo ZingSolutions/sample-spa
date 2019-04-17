@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <CarPreview/>
+    <CarPreview :carData="carData"/>
   </div>
 </template>
 
@@ -11,8 +11,15 @@ import CarPreview from "@/components/CarPreview.vue";
 
 @Component({
   components: {
-    CarPreview,
-  },
+    CarPreview
+  }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  protected carData = {
+    make: "Ford",
+    model: "Fiesta",
+    year: "2018",
+    image: "https://via.placeholder.com/150"
+  };
+}
 </script>
