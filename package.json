@@ -24,7 +24,10 @@
     "@vue/cli-service": "^3.6.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.18",
     "lint-staged": "^8.1.5",
+    "prettier": "^1.17.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "ts-jest": "^23.0.0",
@@ -76,7 +79,12 @@
       "ts-jest": {
         "babelConfig": true
       }
-    }
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,vue}",
+      "!src/main.ts"
+    ]
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
